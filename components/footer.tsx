@@ -2,15 +2,30 @@ import Link from "next/link"
 import Image from "next/image"
 import { Facebook, Mail, Phone, MapPin } from "lucide-react"
 
+const footerLinks = [
+  { href: "#about", label: "About" },
+  { href: "#services", label: "Services" },
+  { href: "#pricing", label: "Pricing" },
+  { href: "#gallery", label: "Gallery" },
+  { href: "#contact", label: "Contact" },
+]
+
+const serviceHighlights = [
+  "Exterior Detailing",
+  "Interior Detailing",
+  "Ceramic Coating",
+  "Paint Correction",
+  "Headlight Restoration",
+]
+
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-background to-surface border-t border-border">
+    <footer className="bg-gradient-to-b from-background to-surface border-t border-border" id="footer">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="relative w-12 h-12">
+              <div className="relative w-14 h-14">
                 <Image src="/images/logo.png" alt="Echelon Precision Detailing" fill className="object-contain" />
               </div>
               <span className="font-serif text-lg font-bold bg-gradient-to-r from-primary via-accent-1 to-secondary bg-clip-text text-transparent">
@@ -18,42 +33,34 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-muted text-sm leading-relaxed">
-              Premium auto detailing services in Scottsdale, Phoenix, and Cave Creek, Arizona.
+              Premium auto detailing services in Scottsdale, Phoenix, and Cave Creek, Arizona with concierge-level care.
             </p>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Quick Links</h3>
+            <h3 className="font-semibold text-foreground mb-4">Navigate</h3>
             <ul className="space-y-2">
-              {["Services", "About", "Gallery", "Book", "Contact"].map((item) => (
-                <li key={item}>
-                  <Link
-                    href={`/${item.toLowerCase()}`}
-                    className="text-muted hover:text-accent-1 transition-colors text-sm"
-                  >
-                    {item}
+              {footerLinks.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className="text-muted hover:text-accent-1 transition-colors text-sm">
+                    {item.label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Services */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Services</h3>
+            <h3 className="font-semibold text-foreground mb-4">Signature Services</h3>
             <ul className="space-y-2 text-sm text-muted">
-              <li>Exterior Cleaning</li>
-              <li>Interior Cleaning</li>
-              <li>Ceramic Coating</li>
-              <li>Paint Correction</li>
-              <li>Headlight Restoration</li>
+              {serviceHighlights.map((service) => (
+                <li key={service}>{service}</li>
+              ))}
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Contact Us</h3>
+            <h3 className="font-semibold text-foreground mb-4">Connect</h3>
             <ul className="space-y-3">
               <li>
                 <a
