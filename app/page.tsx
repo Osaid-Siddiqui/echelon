@@ -325,7 +325,11 @@ export default function HomePage() {
                   Where passion for craftsmanship meets uncompromising standards.
                 </h2>
                 <p className="text-lg text-muted leading-relaxed">
-                  Founded in Scottsdale, Echelon Precision Detailing was created to deliver white-glove automotive care with integrity, innovation, and artistry. We invest in extensive training, premium products, and refined processes to protect and elevate every vehicle entrusted to us.
+                  Hi! I’m Zachary Laursen, the proud owner and operator of Echelon Precision Detailing, your go-to mobile detailing service. With a passion for cars and a commitment to excellence, I started this business to bring high-quality detailing directly to you—whether you're at home, work, or anywhere in between.
+
+At Echelon Precision, we treat every vehicle like it’s our own. From hand washes to full interior and exterior detailing, we use only premium products and proven techniques to restore your car’s shine and protect its value. Our goal is simple: to provide convenient, professional, and reliable service that exceeds your expectations every time.
+
+Your time is valuable, and your car deserves the best. Let us bring the detail shop to your doorstep.
                 </p>
                 <div className="grid sm:grid-cols-2 gap-6">
                   {["500+ Happy Clients", "1000+ Vehicles Detailed", "5+ Years Experience", "100% Satisfaction"].map((stat) => (
